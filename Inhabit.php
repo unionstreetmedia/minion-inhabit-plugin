@@ -37,7 +37,7 @@ class InhabitPlugin extends \Minion\Plugin {
             $statement->execute(array($channel));
             $this->Inhabited[$channel] = true;
         } catch (\PDOException $e) {
-            $minion->log("Told to inhabit $channel, which is already inhabited.", 'INFO');
+            $this->Minion->log("Told to inhabit $channel, which is already inhabited.", 'INFO');
         }
     }
 
